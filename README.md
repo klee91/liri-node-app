@@ -1,6 +1,6 @@
-# liri-node-app
+# LIRI Node Application
 
-Liri is a Node command line application that takes in a command action/argument and will show 
+Liri (short for Language Interpretation and Recognition Interface) is a Node command line application that takes in a command action/argument and will show 
 media results, specifically for Twitter, Spotify and movies. This application currently has 4
 different command actions: 'my-tweets', 'spotify-this-song', 'movie-this' and 'do-what-it-says'.
 
