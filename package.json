@@ -1,0 +1,33 @@
+{
+  "name": "liri-node-app",
+  "version": "1.0.0",
+  "description": "LIRI is a Node application that takes a command input and outputs results/information for Twitter, Spotify and movies.",
+  "main": "(liri.js)",
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "request": "^2.81.0",
+    "spotify": "^0.3.0",
+    "twitter": "^1.7.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "\"echo \\\"Error: no test specified\\\" && exit 1\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klee91/liri-node-app.git"
+  },
+  "keywords": [
+    "node",
+    "twitter",
+    "tweet",
+    "spotify",
+    "movie"
+  ],
+  "author": "Kevin S. Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/klee91/liri-node-app/issues"
+  },
+  "homepage": "https://github.com/klee91/liri-node-app#readme"
+}
