@@ -108,17 +108,17 @@ function spotifySearch() {
 	    if(title = '') {
 		    	console.log("Please put in a song/track!");
 		    } else {
+		    	console.log("-------------------------------------------------------------------------------------");
 		    	console.log("Artist(s): " + data.tracks.items[0].album.artists[0].name);
 		    	console.log("Track: " + data.tracks.items[0].name);
 		    	console.log("Track Preview: " + data.tracks.items[0].preview_url);
 		    	console.log("Album: " + data.tracks.items[0].album.name);
-		    	console.log("-------------------------------------------------------------------------------------");
-
+		    	
+		    	append("-------------------------------------------------------------------------------------");
 		    	append("Artist(s): " + data.tracks.items[0].album.artists[0].name);
 		    	append("Track: " + data.tracks.items[0].name);
 		    	append("Track Preview: " + data.tracks.items[0].preview_url);
 		    	append("Album: " + data.tracks.items[0].album.name);
-		    	append("-------------------------------------------------------------------------------------");
 	    }	
 	});
 };
@@ -140,6 +140,7 @@ function movie() {
     }
   	if (!error && response.statusCode === 200) {
 
+  		console.log("-------------------------------------------------------------------------------------");
   		console.log("Title: " + JSON.parse(body).Title);
 		console.log("IMDB Rating: " + JSON.parse(body).imdbRating);
 		console.log("Country: " + JSON.parse(body).Country);
@@ -148,8 +149,8 @@ function movie() {
 		console.log("Actors: " + JSON.parse(body).Actors);
 		console.log("Rotten Tomatoes Rating: " + JSON.parse(body).tomatoRating);
 		console.log("Rotten Tomatoes URL: " + JSON.parse(body).tomatoURL);
-		console.log("-------------------------------------------------------------------------------------");
-
+		
+		append("-------------------------------------------------------------------------------------");
 		append("Title: " + JSON.parse(body).Title);
 		append("IMDB Rating: " + JSON.parse(body).imdbRating);
 		append("Country: " + JSON.parse(body).Country);
@@ -158,14 +159,14 @@ function movie() {
 		append("Actors: " + JSON.parse(body).Actors);
 		append("Rotten Tomatoes Rating: " + JSON.parse(body).tomatoRating);
 		append("Rotten Tomatoes URL: " + JSON.parse(body).tomatoURL);
-		append("-------------------------------------------------------------------------------------");
+		
   	}
   })
 }
 	
 //append function	
 function append(text) {
-	fs.appendFile("log.txt", text + "\n" , function(error) {
+	fs.appendFile("log.txt", text + "\r\n" , function(error) {
 		if (error) {
 			console.log(error);
 		}
